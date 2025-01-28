@@ -3,6 +3,6 @@ module "aws_s3_bucket" {
   bucket_name  = var.bucket_name
   force_destroy = false
   tags = {
-    Owner = "BL-Main"
+    Owner = "BL-K8S"
   }
 }
