@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "bl-sample" {
    force_destroy = false
 
   tags = {
-    Owner = "BL-Main"
+    Owner = "BL-K8S"
    
   }
 }
