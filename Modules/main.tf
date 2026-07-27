@@ -1,11 +1,5 @@
 resource "aws_s3_bucket" "bl-sample" {
   bucket        = var.bucket_name
-   force_destroy = false
-
-  tags = {
-    Owner = "BL-K8S"
-   
-  }
 }
 
 resource "aws_s3_bucket_policy" "bl-sample" {
