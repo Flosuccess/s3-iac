@@ -2,8 +2,8 @@ resource "aws_s3_bucket" "uptropical7" {
   bucket        = var.bucket_name
 }
 
-resource "aws_s3_bucket_policy" "bl-sample" {
-  bucket = aws_s3_bucket.bl-sample.id
+resource "aws_s3_bucket_policy" "uptropical7" {
+  bucket = aws_s3_bucket.uptropical7.id
 
   policy = jsonencode({
     Version = "2012-10-17"
