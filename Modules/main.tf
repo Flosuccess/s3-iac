@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "bl-sample" {
+resource "aws_s3_bucket" "7uptropical" {
   bucket        = var.bucket_name
 }
 
@@ -13,7 +13,7 @@ resource "aws_s3_bucket_policy" "bl-sample" {
         Effect    = "Allow"
         Principal = ""
         Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.bl-sample.arn}/*"
+        Resource  = "${aws_s3_bucket.7uptropical.arn}/*"
       }
     ]
   })
