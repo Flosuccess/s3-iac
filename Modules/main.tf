@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "bl-sample" {
 }
 
 resource "aws_s3_bucket_policy" "bl-sample" {
-  bucket = var.bucket_name
+  bucket = aws_s3_bucket.bl-sample.id
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -13,7 +13,7 @@ resource "aws_s3_bucket_policy" "bl-sample" {
         Effect    = "Allow"
         Principal = ""
         Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.this.arn}/*"
+        Resource  = "${aws_s3_bucket.bl-sample.arn}/*"
       }
     ]
   })
